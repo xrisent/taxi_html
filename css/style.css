@@ -7,4 +7,120 @@
 
 .container {
     max-width: 1312px;
+    margin: 0 auto ;
+}
+
+.videos__top h2 {
+font-weight: 500;
+font-size: 32px;
+text-align: center;
+color: #1e1e1e;
+margin: 70px 0 50px ;
+
+}
+
+
+ 
+.videos__content .swiper-slide {
+border-radius: 15px ;
+margin-bottom: 30px;
+height: 300px !important;
+width: 40% !important;
+
+}
+ 
+ .videos__content .swiper-slide iframe{
+    border-radius: 15px;
+}
+
+
+ .videos__content .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    bottom: 10px !important;
+  }
+  
+   .videos__content .swiper-pagination-bullet {
+    width: 125px !important;
+    height: 6px !important;
+    background: #000 !important; 
+    border-radius: 3px !important;
+    opacity: 0.5 !important;
+    transition: opacity 0.3s ease, background 0.3s ease;
+  }
+  
+   .videos__content .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #1e1e1e !important;
+  }
+  
+
+/* 
+
+  @media (max-width:1312px){
+    .container{
+        max-width: 900px;
+    }
+    .videos__top .swiper-slide iframe{
+       width: 90%;
+       height: 70%;
+    }
+    .videos__content .swiper-slide {
+        margin-bottom: -30px;
+    }
+     .videos__content .swiper-pagination {
+        width: 125px !important;
+        height: 6px !important;
+        background: #000 !important; 
+        border-radius: 3px !important;
+        opacity: 0.5 !important;
+        transition: opacity 0.3s ease, background 0.3s ease;
+     }
+     .videos__content .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+     }
+
+  } */
+
+
+
+@media (max-width: 1024px) {
+    .videos__content .swiper-slide {
+        width: 45% !important; 
+        display: flex;
+
+    }
+    .videos__top h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .videos__content .swiper-slide {
+        width: 90% !important;
+        
+    }
+
+    .videos__top h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .videos__content .swiper-slide {
+        width: 100% !important; 
+    }
+
+    .videos__top h2 {
+        font-size: 20px;
+    }
+
+    .videos__content .swiper-pagination {
+        bottom: 15px !important; 
+    }
 }
