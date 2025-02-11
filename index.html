@@ -8,16 +8,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/media.css">
    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
     <section id="tariff">
         <div class="container">
-
+            <div class="tariff__box">
+               <div class="tariff__nameBox">
+                    <h4 class="tariff__name">Иштөө үчүн ыңгайлуу тарифти тандап, туташтырыңыз</h4>
+                </div>
+                <div class="tariff__swiper">
+                    <div class="swiper mySwiper__ilim">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="./img/Icon - left.svg" alt="Prev">
+                          </div>
+                          <div class="swiper-button-next">
+                            <img src="./img/Icon - right.svg" alt="Next">
+                          </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <button class="tariff__btn">Өтүнмө калтырыңыз</button>
+            </div>
         </div>
     </section>
     <section id="payment">
         <div class="container">
-            
+            <div class="payment__top">
+                <h3>Толуктоо ыкмалары</h3>
+                <p>Сиз Яндекс Про тиркемесинде төмөнкү төлөм системалары аркылуу балансыңызды толуктасаңыз болот</p>
+            </div>
+            <div class="payment__bottom">
+                <div class="swiper paymentSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="swiper-slide"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/OkmiBEaDGVQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe></div>
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="videos">
@@ -56,7 +102,33 @@
           },
         });
       </script>
-      
-    
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var labels = ["Доставка", "Грузовой", "Вместе", "Эконом", "Комфорт", "Комфорт+", "Бизнес"];
+
+        var swiper = new Swiper(".mySwiper__ilim", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (labels[index] || index + 1) + "</span>";
+            },
+            },
+        }); 
+        var swiper = new Swiper(".paymentSwiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            loop: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </html>
