@@ -5,11 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <section id="tariff">
         <div class="container">
-
+            <div class="tariff__box">
+                <div class="tariff__nameBox">
+                    <h4 class="tariff__name">Иштөө үчүн ыңгайлуу тарифти тандап, туташтырыңыз</h4>
+                </div>
+                <div class="tariff__swiper">
+                    <div class="swiper mySwiper__ilim">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                          <div class="swiper-slide"><img class="swiper-slide__imf1" src="./img/Эконом.png" alt=""></div>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img src="./img/Icon - left.svg" alt="Prev">
+                          </div>
+                          <div class="swiper-button-next">
+                            <img src="./img/Icon - right.svg" alt="Next">
+                          </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <button class="tariff__btn">Өтүнмө калтырыңыз</button>
+            </div>
         </div>
     </section>
     <section id="payment">
@@ -22,5 +48,27 @@
             
         </div>
     </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+    <script>
+    var labels = ["Доставка", "Грузовой", "Вместе", "Эконом", "Комфорт", "Комфорт+", "Бизнес"];
+
+    var swiper = new Swiper(".mySwiper__ilim", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (labels[index] || index + 1) + "</span>";
+        },
+        },
+    }); 
+    </script>
 </body>
 </html>
