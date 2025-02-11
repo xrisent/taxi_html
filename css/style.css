@@ -180,6 +180,9 @@ body {
 
     .mySwiper__ilim .swiper-pagination::-webkit-scrollbar {
         display: none;
+    }
+}
+
 .payment__top{
     display: flex;
     flex-direction: column;
