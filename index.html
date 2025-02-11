@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/media.css">
+   
 </head>
 <body>
+    <section id="tariff">
+        <div class="container">
+
+        </div>
+    </section>
     <section id="payment">
         <div class="container">
             
@@ -14,8 +22,41 @@
     </section>
     <section id="videos">
         <div class="container">
-            
+            <div class="videos__top">
+                <h2>Полезные видео</h2>
+           <div class="videos__content">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><iframe width="500px" height="300px" src="https://www.youtube.com/embed/Iwco5F-8zY4?si=QVO4HTru2a2jsq7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                  <div class="swiper-slide"><iframe width="500px" height="300px" src="https://www.youtube.com/embed/mMZzIysQpic?si=Rt5E-zxk8fp6EVR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                  <div class="swiper-slide"><iframe width="500px" height="300px" src="https://www.youtube.com/embed/xbZHYHqD-ZU?si=kJM9d9Mdbw3y6wpS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                  <div class="swiper-slide"><iframe width="500px" height="300px" src="https://www.youtube.com/embed/Iwco5F-8zY4?si=QVO4HTru2a2jsq7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                  <div class="swiper-slide"><iframe width="500px" height="300px" src="https://www.youtube.com/embed/mMZzIysQpic?si=Rt5E-zxk8fp6EVR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+           </div>
         </div>
+    </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+            renderBullet: function (index, className) {
+              return index < 2 ? `<span class="${className}"></span>` : ''; 
+            }
+          },
+        });
+      </script>
+      
+    
 </body>
 </html>
