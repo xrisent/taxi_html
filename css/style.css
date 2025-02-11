@@ -83,8 +83,10 @@
     margin: none;
     max-width: none;
 }
-
-.swiper-slide-active{
-    opacity: 1 !important;
-    height: 105%;
+.paymentSwiper{
+    .swiper-slide-active{
+        opacity: 1 !important;
+        height: 105%;
+    }
 }
+

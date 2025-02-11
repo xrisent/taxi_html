@@ -50,9 +50,12 @@
         width: 100%;
     }
 
-    .swiper-slide-active{
-        width:  100% !important;
+    .paymentSwiper{
+        .swiper-slide-active{
+            width:  100% !important;
+        }
     }
+    
 
       .payment__top{
         p{
