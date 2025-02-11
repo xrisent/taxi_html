@@ -1,5 +1,7 @@
 @media (width<1180px) {
-    
+    .container{
+        width: 1050px;
+    }
 }
 
 @media (width<1050px) {
@@ -14,6 +16,25 @@
         width: 690px;
     }
 
+    .payment__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        margin: 0 0 20px 0;
+        h3{
+            font-size: 22px;
+            font-family: "Noto Sans", serif;
+            font-weight: 500;
+        }
+        p{
+            width: 598px;
+            font-family: "Noto Sans", serif;
+            font-size: 16px;
+            text-align: center
+        }
+    }
+    
 }
 
 @media (width<734px) {
@@ -26,7 +47,17 @@
 
 @media (width<500px) {
     .container{
-        width: 80%;
+        width: 100%;
     }
 
+    .swiper-slide-active{
+        width:  100% !important;
+    }
+
+      .payment__top{
+        p{
+            width: 95%;
+            font-size: 14px;
+        }
+    }
 }
